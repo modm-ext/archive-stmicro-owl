@@ -24,6 +24,17 @@
   <rdfs:range rdf:resource="#Signal"/>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#hasInterruptVector">
+  <rdfs:domain rdf:resource="#InterruptTable"/>
+  <rdfs:range rdf:resource="#InterruptVector"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDescription">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#InterruptVector"/>
+</owl:DatatypeProperty>
+
 <owl:DatatypeProperty rdf:about="#hasPinType">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -58,6 +69,10 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AF number attached to the [Pin, hasSignal, AlternateFunction] relation.</rdfs:comment>
 </owl:AnnotationProperty>
 
+<owl:AnnotationProperty rdf:about="#vectorPosition">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AF number attached to the [InterruptTable, hasInterruptVector, AlternateFunction] relation.</rdfs:comment>
+</owl:AnnotationProperty>
+
 <owl:AnnotationProperty rdf:about="#pinPosition">
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pin position attached to the [Package, hasPin, Pin] relation.</rdfs:comment>
 </owl:AnnotationProperty>
@@ -65,6 +80,16 @@
 <owl:Class rdf:about="#Device">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The unique identifier (part number) of the device.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#InterruptTable">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The interrupt table.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#InterruptVector">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interrupt vector in the table.</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#GpioPort">
@@ -97,19 +122,19 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects to an analog/special peripheral function.</rdfs:comment>
 </owl:Class>
 
-<Device rdf:about="stmicro/stm32f102#stm32f102c4t6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
 <Device rdf:about="stmicro/stm32f102#stm32f102r6t6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32f102#stm32f102c6t6">
+<Device rdf:about="stmicro/stm32f102#stm32f102c4t6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
 <Device rdf:about="stmicro/stm32f102#stm32f102r4t6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32f102#stm32f102c6t6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
@@ -124,8 +149,8 @@
   <hasPin rdf:resource="stmicro/stm32f102#PC13-TAMPER-RTC"/>
   <hasPin rdf:resource="stmicro/stm32f102#PC14-OSC32_IN"/>
   <hasPin rdf:resource="stmicro/stm32f102#PC15-OSC32_OUT"/>
-  <hasPin rdf:resource="stmicro/stm32f102#OSC_IN"/>
-  <hasPin rdf:resource="stmicro/stm32f102#OSC_OUT"/>
+  <hasPin rdf:resource="stmicro/stm32f102#PD0(7)-OSC_IN"/>
+  <hasPin rdf:resource="stmicro/stm32f102#PD1(7)-OSC_OUT"/>
   <hasPin rdf:resource="stmicro/stm32f102#NRST"/>
   <hasPin rdf:resource="stmicro/stm32f102#PC0"/>
   <hasPin rdf:resource="stmicro/stm32f102#PC1"/>
@@ -192,8 +217,8 @@
   <hasPin rdf:resource="stmicro/stm32f102#PC13-TAMPER-RTC"/>
   <hasPin rdf:resource="stmicro/stm32f102#PC14-OSC32_IN"/>
   <hasPin rdf:resource="stmicro/stm32f102#PC15-OSC32_OUT"/>
-  <hasPin rdf:resource="stmicro/stm32f102#OSC_IN"/>
-  <hasPin rdf:resource="stmicro/stm32f102#OSC_OUT"/>
+  <hasPin rdf:resource="stmicro/stm32f102#PD0(7)-OSC_IN"/>
+  <hasPin rdf:resource="stmicro/stm32f102#PD1(7)-OSC_OUT"/>
   <hasPin rdf:resource="stmicro/stm32f102#NRST"/>
   <hasPin rdf:resource="stmicro/stm32f102#VSSA"/>
   <hasPin rdf:resource="stmicro/stm32f102#VDDA"/>
@@ -253,13 +278,13 @@
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
 </Pin>
 
-<Pin rdf:about="stmicro/stm32f102#OSC_IN">
+<Pin rdf:about="stmicro/stm32f102#PD0(7)-OSC_IN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
 </Pin>
 
-<Pin rdf:about="stmicro/stm32f102#OSC_OUT">
+<Pin rdf:about="stmicro/stm32f102#PD1(7)-OSC_OUT">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
@@ -1287,28 +1312,28 @@
 <owl:Axiom>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedSource rdf:resource="stmicro/stm32f102#LQFP48"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#OSC_OUT"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#PD1(7)-OSC_OUT"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedSource rdf:resource="stmicro/stm32f102#LQFP64"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#OSC_OUT"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#PD1(7)-OSC_OUT"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedSource rdf:resource="stmicro/stm32f102#LQFP48"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#OSC_IN"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#PD0(7)-OSC_IN"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedSource rdf:resource="stmicro/stm32f102#LQFP64"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#OSC_IN"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f102#PD0(7)-OSC_IN"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
 </owl:Axiom>
 

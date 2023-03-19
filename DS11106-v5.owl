@@ -9,8 +9,8 @@
 <owl:Ontology rdf:about="https://data.modm.io/stmicro"/>
 
 <owl:ObjectProperty rdf:about="#hasPin">
-  <rdfs:domain rdf:resource="#GpioPort"/>
   <rdfs:domain rdf:resource="#Package"/>
+  <rdfs:domain rdf:resource="#GpioPort"/>
   <rdfs:range rdf:resource="#Pin"/>
 </owl:ObjectProperty>
 
@@ -82,6 +82,11 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The unique identifier (part number) of the device.</rdfs:comment>
 </owl:Class>
 
+<owl:Class rdf:about="#DeviceFilter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A partial device identifier as a RegEx pattern.</rdfs:comment>
+</owl:Class>
+
 <owl:Class rdf:about="#InterruptTable">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The interrupt table.</rdfs:comment>
@@ -122,131 +127,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects to an analog/special peripheral function.</rdfs:comment>
 </owl:Class>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021g4t3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4u6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4t3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4t7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
 <Device rdf:about="stmicro/stm32l021#stm32l021f4t3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4t7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4t7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4p7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4t6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4p6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4t6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4u6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4t6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4u7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4t3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4u6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4p3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4u3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4p3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4p6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4u6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4t7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4u7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4p3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4p3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4p6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4t3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4u3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4p7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4u6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4u7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4t3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
@@ -254,139 +135,27 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021f4t6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4p7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4u3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4u7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4p7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
 <Device rdf:about="stmicro/stm32l021#stm32l021g4p7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021k4t7d">
+<Device rdf:about="stmicro/stm32l021#stm32l021k4u6d">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021g4t7d">
+<Device rdf:about="stmicro/stm32l021#stm32l021f4p7d">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021k4u7">
+<Device rdf:about="stmicro/stm32l021#stm32l021k4p6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021k4t3d">
+<Device rdf:about="stmicro/stm32l021#stm32l021f4t3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021f4p6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4u7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4u3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4p7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4p6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4p6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4u3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4u6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4p7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4u7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4t6d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4p6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4p3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4p3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4u3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4p6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4t7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4u6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021g4u3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021d4u7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4t6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4p3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4p7d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021f4t7d">
+<Device rdf:about="stmicro/stm32l021#stm32l021f4u6d">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
@@ -394,11 +163,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Device rdf:about="stmicro/stm32l021#stm32l021d4t3d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Device>
-
-<Device rdf:about="stmicro/stm32l021#stm32l021k4u6d">
+<Device rdf:about="stmicro/stm32l021#stm32l021g4u3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
@@ -410,18 +175,247 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Device>
 
-<Pin rdf:about="stmicro/stm32l021#PC14-OSC32_IN">
+<Device rdf:about="stmicro/stm32l021#stm32l021d4p6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#OSC32_IN"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
+</Device>
 
-<AdditionalFunction rdf:about="stmicro/stm32l021#OSC32_IN">
+<Device rdf:about="stmicro/stm32l021#stm32l021f4t7d">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
+</Device>
 
-<Package rdf:about="stmicro/stm32l021#LQFP32">
+<Device rdf:about="stmicro/stm32l021#stm32l021d4p3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4u3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4p3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4p3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4u6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4p6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4u7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4u6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4t6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4p3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4u7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4p6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4t7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4t7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4t6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4p6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4u6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4t7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4t7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4p3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4t3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4p7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4p6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4t3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4p7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4u6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4p7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4p7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4u6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4t6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4t3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4t3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4t6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4u3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4u7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4p3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4p7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4t6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4t6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4u3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4u3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4t7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4u3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4u3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4p6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4u7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4t7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4p3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4u7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021d4t7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4u7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4u7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4p7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021k4t3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4u6d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4u7d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021f4p6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Device rdf:about="stmicro/stm32l021#stm32l021g4t3d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Device>
+
+<Package rdf:about="stmicro/stm32l021#UFQFPN20">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPin rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
   <hasPin rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
@@ -429,31 +423,231 @@
   <hasPin rdf:resource="stmicro/stm32l021#VDDA"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA1"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA2"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA3"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA4"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA5"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA6"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA7"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB0"/>
   <hasPin rdf:resource="stmicro/stm32l021#PB1"/>
   <hasPin rdf:resource="stmicro/stm32l021#VSS"/>
   <hasPin rdf:resource="stmicro/stm32l021#VDD"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA8"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA9"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA10"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA11"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA12"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA13"/>
   <hasPin rdf:resource="stmicro/stm32l021#PA14"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA15"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB3"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB4"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB5"/>
   <hasPin rdf:resource="stmicro/stm32l021#PB6"/>
   <hasPin rdf:resource="stmicro/stm32l021#PB7"/>
   <hasPin rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
 </Package>
+
+<Pin rdf:about="stmicro/stm32l021#PC14-OSC32_IN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#OSC32_IN"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PC15-OSC32_OUT">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#OSC32_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TC</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#NRST">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RST</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#VDDA">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA0-CK_IN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#WKUP1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#RTC_TAMP2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN0"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#CK_IN"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INM"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INP"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#EVENTOUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SMBA"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RTS_DE"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN4"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INM"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INM"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_NSS"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CK"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN5"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INM"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INM"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_SCK"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN6"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_CTS"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#EVENTOUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN7"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CTS"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#EVENTOUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PB1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#VREF_OUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN9"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CK"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RTS_DE"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#VSS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#VDD">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#MCO"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SDA"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#RTC_REFIN"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA13">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SWDIO"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SDA"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_SCK"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA14">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SWCLK"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SMBA"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PB6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PB7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#VREF_PVD_IN"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SDA"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PB9-BOOT0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I</hasPinType>
+</Pin>
 
 <Package rdf:about="stmicro/stm32l021#TSSOP14">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -498,6 +692,35 @@
   <hasPin rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
 </Package>
 
+<Pin rdf:about="stmicro/stm32l021#PA2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#RTC_TS"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#RTC_TAMP3"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#RTC_OUT"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INM"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#WKUP3"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
+<Pin rdf:about="stmicro/stm32l021#PA3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN3"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
+  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
+  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
+</Pin>
+
 <Package rdf:about="stmicro/stm32l021#UFQFPN32">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasPin rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
@@ -533,271 +756,6 @@
   <hasPin rdf:resource="stmicro/stm32l021#PB8"/>
 </Package>
 
-<Package rdf:about="stmicro/stm32l021#UFQFPN28">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
-  <hasPin rdf:resource="stmicro/stm32l021#NRST"/>
-  <hasPin rdf:resource="stmicro/stm32l021#VDDA"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA1"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA2"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA3"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA4"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA5"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA6"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA7"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB0"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB1"/>
-  <hasPin rdf:resource="stmicro/stm32l021#VSS"/>
-  <hasPin rdf:resource="stmicro/stm32l021#VDD"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA8"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA9"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA10"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA13"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA14"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA15"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB3"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB4"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB5"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB6"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB7"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
-</Package>
-
-<Package rdf:about="stmicro/stm32l021#UFQFPN20">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
-  <hasPin rdf:resource="stmicro/stm32l021#NRST"/>
-  <hasPin rdf:resource="stmicro/stm32l021#VDDA"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA1"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA4"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA5"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA6"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA7"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB1"/>
-  <hasPin rdf:resource="stmicro/stm32l021#VSS"/>
-  <hasPin rdf:resource="stmicro/stm32l021#VDD"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA9"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA10"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA13"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PA14"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB6"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB7"/>
-  <hasPin rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
-</Package>
-
-<Pin rdf:about="stmicro/stm32l021#PC15-OSC32_OUT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#OSC32_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TC</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#OSC32_OUT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#NRST">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RST</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#VDDA">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#PA0-CK_IN">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INM"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN0"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#RTC_TAMP2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#WKUP1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#CK_IN"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#COMP1_INM">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN0">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_TAMP2">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#WKUP1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#CK_IN">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PA1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INP"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#EVENTOUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SMBA"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RTS_DE"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#COMP1_INP">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PA2">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INM"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#RTC_TAMP3"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#RTC_TS"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#RTC_OUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#WKUP3"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#COMP2_INM">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN2">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_TAMP3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_TS">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_OUT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#WKUP3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PA3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN3"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#COMP2_INP">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PA4">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INM"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INM"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN4"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_NSS"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CK"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN4">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PA5">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_INM"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INM"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN5"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_SCK"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTa</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN5">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PA6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN6"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_CTS"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#EVENTOUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PA7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN7"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CTS"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#EVENTOUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
 <Pin rdf:about="stmicro/stm32l021#PB0">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN8"/>
@@ -811,46 +769,11 @@
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
 </Pin>
 
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN8">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#VREF_OUT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PB1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#ADC_IN9"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#VREF_OUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CK"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RTS_DE"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN9">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
 <Pin rdf:about="stmicro/stm32l021#PB2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
   <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#VSS">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#VDD">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</hasPinType>
 </Pin>
 
 <Pin rdf:about="stmicro/stm32l021#PA8">
@@ -861,30 +784,6 @@
   <hasSignal rdf:resource="stmicro/stm32l021#USART2_CK"/>
   <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
   <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#PA9">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#MCO"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#PA10">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM21_CH1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SDA"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#RTC_REFIN"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
 </Pin>
 
@@ -905,31 +804,6 @@
   <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
   <hasSignal rdf:resource="stmicro/stm32l021#EVENTOUT"/>
   <hasSignal rdf:resource="stmicro/stm32l021#USART2_RTS_DE"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#PA13">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SWDIO"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SDA"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_SCK"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#PA14">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SWCLK"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SMBA"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
   <hasSignal rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
   <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FT</hasPinStructure>
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
@@ -976,41 +850,6 @@
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
 </Pin>
 
-<Pin rdf:about="stmicro/stm32l021#PB6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<Pin rdf:about="stmicro/stm32l021#PB7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP2_INP"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#VREF_PVD_IN"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#I2C1_SDA"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FTf</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
-</Pin>
-
-<AdditionalFunction rdf:about="stmicro/stm32l021#VREF_PVD_IN">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AdditionalFunction>
-
-<Pin rdf:about="stmicro/stm32l021#PB9-BOOT0">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasPinStructure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</hasPinStructure>
-  <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I</hasPinType>
-</Pin>
-
 <Pin rdf:about="stmicro/stm32l021#PB8">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <hasSignal rdf:resource="stmicro/stm32l021#USART2_TX"/>
@@ -1021,44 +860,107 @@
   <hasPinType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I/O</hasPinType>
 </Pin>
 
-<Pin rdf:about="stmicro/stm32l021#PA0">
+<Package rdf:about="stmicro/stm32l021#LQFP32">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CTS"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
-  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-</Pin>
+  <hasPin rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
+  <hasPin rdf:resource="stmicro/stm32l021#NRST"/>
+  <hasPin rdf:resource="stmicro/stm32l021#VDDA"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA1"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA2"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA3"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA4"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA5"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA6"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA7"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB0"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB1"/>
+  <hasPin rdf:resource="stmicro/stm32l021#VSS"/>
+  <hasPin rdf:resource="stmicro/stm32l021#VDD"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA8"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA9"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA10"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA11"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA12"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA13"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA14"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA15"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB3"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB4"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB5"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB6"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB7"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
+</Package>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#USART2_RX">
+<Package rdf:about="stmicro/stm32l021#UFQFPN28">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+  <hasPin rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
+  <hasPin rdf:resource="stmicro/stm32l021#NRST"/>
+  <hasPin rdf:resource="stmicro/stm32l021#VDDA"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA1"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA2"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA3"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA4"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA5"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA6"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA7"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB0"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB1"/>
+  <hasPin rdf:resource="stmicro/stm32l021#VSS"/>
+  <hasPin rdf:resource="stmicro/stm32l021#VDD"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA8"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA9"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA10"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA13"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA14"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PA15"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB3"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB4"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB5"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB6"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB7"/>
+  <hasPin rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
+</Package>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#LPTIM1_IN1">
+<AdditionalFunction rdf:about="stmicro/stm32l021#OSC32_IN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+</AdditionalFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#TIM2_CH1">
+<AdditionalFunction rdf:about="stmicro/stm32l021#OSC32_OUT">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+</AdditionalFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#USART2_CTS">
+<AdditionalFunction rdf:about="stmicro/stm32l021#WKUP1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+</AdditionalFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#TIM2_ETR">
+<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_TAMP2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+</AdditionalFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#LPUART1_RX">
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN0">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+</AdditionalFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#COMP1_OUT">
+<AdditionalFunction rdf:about="stmicro/stm32l021#CK_IN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#COMP1_INM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#COMP1_INP">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
 
 <AlternateFunction rdf:about="stmicro/stm32l021#EVENTOUT">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -1088,15 +990,31 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
+<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_TS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_TAMP3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#RTC_OUT">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#COMP2_INM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#WKUP3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
 <AlternateFunction rdf:about="stmicro/stm32l021#TIM21_CH1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
-
-<AlternateFunction rdf:about="stmicro/stm32l021#I2C1_SDA">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
-
-<AlternateFunction rdf:about="stmicro/stm32l021#RTC_REFIN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
@@ -1104,19 +1022,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#SPI1_MISO">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
-
-<AlternateFunction rdf:about="stmicro/stm32l021#LPTIM1_OUT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
-
-<AlternateFunction rdf:about="stmicro/stm32l021#TIM21_CH2">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
-
-<AlternateFunction rdf:about="stmicro/stm32l021#SPI1_MOSI">
+<AlternateFunction rdf:about="stmicro/stm32l021#USART2_TX">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
@@ -1124,31 +1030,43 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#SWDIO">
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#COMP2_INP">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#TIM21_CH2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#LPTIM1_ETR">
+<AlternateFunction rdf:about="stmicro/stm32l021#TIM2_CH4">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#SPI1_SCK">
+<AlternateFunction rdf:about="stmicro/stm32l021#USART2_RX">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#SWCLK">
+<AlternateFunction rdf:about="stmicro/stm32l021#LPUART1_RX">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#USART2_TX">
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN4">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</AlternateFunction>
+</AdditionalFunction>
 
 <AlternateFunction rdf:about="stmicro/stm32l021#SPI1_NSS">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#TIM2_CH4">
+<AlternateFunction rdf:about="stmicro/stm32l021#LPTIM1_IN1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#LPTIM1_ETR">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
@@ -1160,7 +1078,67 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
+<AlternateFunction rdf:about="stmicro/stm32l021#TIM2_ETR">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#SPI1_SCK">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#TIM2_CH1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#SPI1_MISO">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
 <AlternateFunction rdf:about="stmicro/stm32l021#LPUART1_CTS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#COMP1_OUT">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#SPI1_MOSI">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#LPTIM1_OUT">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#USART2_CTS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#VREF_OUT">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#ADC_IN9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#LPUART1_RTS_DE">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
@@ -1168,9 +1146,36 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
 
-<AlternateFunction rdf:about="stmicro/stm32l021#LPUART1_RTS_DE">
+<AlternateFunction rdf:about="stmicro/stm32l021#I2C1_SDA">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#RTC_REFIN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#SWDIO">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AlternateFunction rdf:about="stmicro/stm32l021#SWCLK">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AlternateFunction>
+
+<AdditionalFunction rdf:about="stmicro/stm32l021#VREF_PVD_IN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AdditionalFunction>
+
+<Pin rdf:about="stmicro/stm32l021#PA0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_RX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#USART2_CTS"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
+  <hasSignal rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+</Pin>
 
 <Pin rdf:about="stmicro/stm32l021#PB9">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -1183,6 +1188,55 @@
 <Pin rdf:about="stmicro/stm32l021#PC15">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Pin>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CTS"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_RX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
 
 <owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB8"/>
@@ -1342,384 +1396,6 @@
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB3"/>
   <owl:annotatedProperty rdf:resource="#hasSignal"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_SCK"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB2"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_RTS_DE"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CK"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_RTS_DE"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH2"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_TX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#MCO"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CK"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#MCO"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_ETR"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CTS"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_CTS"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_SCK"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CK"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_NSS"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_RX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_TX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_CH1"/>
   <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
 </owl:Axiom>
 
@@ -1962,6 +1638,384 @@
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_TX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA9"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#MCO"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CK"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA8"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#MCO"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB2"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_RTS_DE"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB1"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CK"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_RTS_DE"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH2"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PB0"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_ETR"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CTS"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA7"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MOSI"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#EVENTOUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_CTS"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA6"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_MISO"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN2"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA5"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_SCK"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CK"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#I2C1_SCL"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_ETR"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA4"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#SPI1_NSS"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_RX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH4"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA3"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_CH2"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP2_OUT"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_TX"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH3"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA2"/>
+  <owl:annotatedProperty rdf:resource="#hasSignal"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM21_CH1"/>
+  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+</owl:Axiom>
+
+<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA1"/>
   <owl:annotatedProperty rdf:resource="#hasSignal"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_TX"/>
@@ -2011,52 +2065,411 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#COMP1_OUT"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</alternateFunction>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPUART1_RX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</alternateFunction>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_ETR"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</alternateFunction>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB6"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_CTS"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</alternateFunction>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB5"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#TIM2_CH1"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</alternateFunction>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB4"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#LPTIM1_IN1"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</alternateFunction>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB3"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#PA0"/>
-  <owl:annotatedProperty rdf:resource="#hasSignal"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#USART2_RX"/>
-  <alternateFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</alternateFunction>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA15"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA8"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB0"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA3"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA2"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB6"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB5"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB4"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB3"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA15"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA12"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA11"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA8"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB0"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA3"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA2"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2067,59 +2480,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2130,45 +2494,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB6"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB6"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB6"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB6"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB5"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2179,38 +2508,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB5"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB4"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB4"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB4"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB3"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2221,45 +2522,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB3"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA15"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA15"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA15"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2270,63 +2536,7 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</pinPosition>
@@ -2340,13 +2550,6 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA12"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA11"/>
@@ -2354,66 +2557,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA11"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2424,59 +2571,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA8"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA8"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA8"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2485,64 +2583,6 @@
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2553,45 +2593,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB0"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2602,66 +2607,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB0"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2672,66 +2621,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2742,59 +2635,10 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA3"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA3"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA3"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA3"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA2"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2805,34 +2649,6 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA2"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA2"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
@@ -2840,42 +2656,147 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA3"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA2"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
@@ -2884,7 +2805,98 @@
 <owl:Axiom>
   <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
 </owl:Axiom>
 
@@ -2896,10 +2908,143 @@
 </owl:Axiom>
 
 <owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB9-BOOT0"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB6"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA14"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA13"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA10"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA9"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDD"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VSS"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PB1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA7"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA6"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA5"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA4"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
+  <owl:annotatedProperty rdf:resource="#hasPin"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA1"/>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN20"/>
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PA0-CK_IN"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</pinPosition>
+  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2907,41 +3052,6 @@
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#VDDA"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2949,41 +3059,6 @@
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#NRST"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -2991,41 +3066,6 @@
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC15-OSC32_OUT"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinPosition>
 </owl:Axiom>
 
 <owl:Axiom>
@@ -3033,41 +3073,6 @@
   <owl:annotatedProperty rdf:resource="#hasPin"/>
   <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
   <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN28"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#UFQFPN32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP20"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#TSSOP14"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
-</owl:Axiom>
-
-<owl:Axiom>
-  <owl:annotatedSource rdf:resource="stmicro/stm32l021#LQFP32"/>
-  <owl:annotatedProperty rdf:resource="#hasPin"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32l021#PC14-OSC32_IN"/>
-  <pinPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</pinPosition>
 </owl:Axiom>
 
 

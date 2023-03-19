@@ -9,9 +9,9 @@
 <owl:Ontology rdf:about="https://data.modm.io/stmicro"/>
 
 <owl:ObjectProperty rdf:about="#hasPin">
+  <rdfs:domain rdf:resource="#Package"/>
   <rdfs:domain rdf:resource="#GpioPort"/>
   <rdfs:range rdf:resource="#Pin"/>
-  <rdfs:domain rdf:resource="#Package"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#hasPackage">
@@ -31,14 +31,14 @@
 
 <owl:DatatypeProperty rdf:about="#hasDescription">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   <rdfs:domain rdf:resource="#InterruptVector"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#hasPinType">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   <rdfs:domain rdf:resource="#Pin"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 - S: supply
 - I: input
@@ -50,8 +50,8 @@
 
 <owl:DatatypeProperty rdf:about="#hasPinStructure">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   <rdfs:domain rdf:resource="#Pin"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 - FT: 5V tolerant
 - FTf: 5V tolerant, FM+ capable
@@ -80,6 +80,11 @@
 <owl:Class rdf:about="#Device">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The unique identifier (part number) of the device.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#DeviceFilter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A partial device identifier as a RegEx pattern.</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#InterruptTable">
@@ -122,415 +127,427 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects to an analog/special peripheral function.</rdfs:comment>
 </owl:Class>
 
-<InterruptTable rdf:about="stmicro/stm32f0x8#VectorTable">
+<DeviceFilter rdf:about="#stm32f0.1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#WWDG"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#PVD_VDDIO2"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#DMA_CH2_3"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#DMA2_CH1_2"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#DMA_CH4_5_6_7"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#DMA2_CH3_4_5"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#ADC_COMP"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM1_BRK_UP_TRG_COM"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM1_CC"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM2"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM3"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM6_DAC"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM7"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM14"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#RTC"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM15"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM16"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TIM17"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#I2C1"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#I2C2"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#SPI1"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#SPI2"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#USART1"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#USART2"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#USART3_4_5_6_7_8"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#FLASH"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#CEC_CAN"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#USB"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#RCC_CRS"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#EXTI0_1"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#EXTI2_3"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#EXTI4_15"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#TSC"/>
-  <hasInterruptVector rdf:resource="stmicro/stm32f0x8#DMA_CH1"/>
+</DeviceFilter>
+
+<DeviceFilter rdf:about="#stm32f0.2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DeviceFilter>
+
+<DeviceFilter rdf:about="#stm32f0.8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DeviceFilter>
+
+<InterruptTable rdf:about="stmicro/stm32f0x1#VectorTable">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#WWDG"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#PVD_VDDIO2"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#DMA2_CH1_2"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#DMA_CH2_3"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#DMA_CH4_5_6_7"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#DMA2_CH3_4_5"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#ADC_COMP"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM1_BRK_UP_TRG_COM"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM1_CC"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM2"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM3"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM6_DAC"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM7"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM14"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#RTC"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM15"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM16"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TIM17"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#I2C1"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#I2C2"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#SPI1"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#SPI2"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#USART1"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#USART2"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#USART3_4_5_6_7_8"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#FLASH"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#CEC_CAN"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#USB"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#RCC_CRS"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#EXTI0_1"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#EXTI2_3"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#EXTI4_15"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#TSC"/>
+  <hasInterruptVector rdf:resource="stmicro/stm32f0x1#DMA_CH1"/>
 </InterruptTable>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#WWDG">
+<InterruptVector rdf:about="stmicro/stm32f0x1#WWDG">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#PVD_VDDIO2">
+<InterruptVector rdf:about="stmicro/stm32f0x1#PVD_VDDIO2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#DMA_CH2_3">
+<InterruptVector rdf:about="stmicro/stm32f0x1#DMA2_CH1_2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#DMA2_CH1_2">
+<InterruptVector rdf:about="stmicro/stm32f0x1#DMA_CH2_3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#DMA_CH4_5_6_7">
+<InterruptVector rdf:about="stmicro/stm32f0x1#DMA_CH4_5_6_7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#DMA2_CH3_4_5">
+<InterruptVector rdf:about="stmicro/stm32f0x1#DMA2_CH3_4_5">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#ADC_COMP">
+<InterruptVector rdf:about="stmicro/stm32f0x1#ADC_COMP">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM1_BRK_UP_TRG_COM">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM1_BRK_UP_TRG_COM">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM1_CC">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM1_CC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM2">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM3">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM6_DAC">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM6_DAC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM7">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM14">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM14">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#RTC">
+<InterruptVector rdf:about="stmicro/stm32f0x1#RTC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM15">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM15">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM16">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM16">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TIM17">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TIM17">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#I2C1">
+<InterruptVector rdf:about="stmicro/stm32f0x1#I2C1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#I2C2">
+<InterruptVector rdf:about="stmicro/stm32f0x1#I2C2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#SPI1">
+<InterruptVector rdf:about="stmicro/stm32f0x1#SPI1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#SPI2">
+<InterruptVector rdf:about="stmicro/stm32f0x1#SPI2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#USART1">
+<InterruptVector rdf:about="stmicro/stm32f0x1#USART1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#USART2">
+<InterruptVector rdf:about="stmicro/stm32f0x1#USART2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#USART3_4_5_6_7_8">
+<InterruptVector rdf:about="stmicro/stm32f0x1#USART3_4_5_6_7_8">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#FLASH">
+<InterruptVector rdf:about="stmicro/stm32f0x1#FLASH">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#CEC_CAN">
+<InterruptVector rdf:about="stmicro/stm32f0x1#CEC_CAN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#USB">
+<InterruptVector rdf:about="stmicro/stm32f0x1#USB">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#RCC_CRS">
+<InterruptVector rdf:about="stmicro/stm32f0x1#RCC_CRS">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#EXTI0_1">
+<InterruptVector rdf:about="stmicro/stm32f0x1#EXTI0_1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#EXTI2_3">
+<InterruptVector rdf:about="stmicro/stm32f0x1#EXTI2_3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#EXTI4_15">
+<InterruptVector rdf:about="stmicro/stm32f0x1#EXTI4_15">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#TSC">
+<InterruptVector rdf:about="stmicro/stm32f0x1#TSC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
-<InterruptVector rdf:about="stmicro/stm32f0x8#DMA_CH1">
+<InterruptVector rdf:about="stmicro/stm32f0x1#DMA_CH1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </InterruptVector>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#DMA_CH1"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#DMA_CH1"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TSC"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TSC"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#EXTI4_15"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#EXTI4_15"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#EXTI2_3"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#EXTI2_3"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#EXTI0_1"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#EXTI0_1"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#RCC_CRS"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#RCC_CRS"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#USB"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#USB"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#CEC_CAN"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#CEC_CAN"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#FLASH"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#FLASH"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#USART3_4_5_6_7_8"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#USART3_4_5_6_7_8"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#USART2"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#USART2"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#USART1"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#USART1"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#SPI2"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#SPI2"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#SPI1"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#SPI1"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#I2C2"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#I2C2"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#I2C1"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#I2C1"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM17"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM17"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM16"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM16"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM15"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM15"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#RTC"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#RTC"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM14"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM14"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM7"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM7"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM6_DAC"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM6_DAC"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM3"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM3"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM2"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM2"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM1_CC"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM1_CC"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#TIM1_BRK_UP_TRG_COM"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#TIM1_BRK_UP_TRG_COM"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#ADC_COMP"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#ADC_COMP"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#DMA2_CH3_4_5"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#DMA2_CH3_4_5"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#DMA_CH4_5_6_7"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#DMA_CH4_5_6_7"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#DMA2_CH1_2"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#DMA_CH2_3"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#DMA_CH2_3"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#DMA2_CH1_2"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#PVD_VDDIO2"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#PVD_VDDIO2"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</vectorPosition>
 </owl:Axiom>
 
 <owl:Axiom>
+  <owl:annotatedSource rdf:resource="stmicro/stm32f0x1#VectorTable"/>
   <owl:annotatedProperty rdf:resource="#hasInterruptVector"/>
-  <owl:annotatedSource rdf:resource="stmicro/stm32f0x8#VectorTable"/>
-  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x8#WWDG"/>
+  <owl:annotatedTarget rdf:resource="stmicro/stm32f0x1#WWDG"/>
   <vectorPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</vectorPosition>
 </owl:Axiom>
 
